@@ -1,6 +1,5 @@
 abstract class animals {
-	String breed,color;
-	int age;
+	String breed,color,name;
 	abstract void eat();
 	void speak() {
 		System.out.println("Animal Speaking");
@@ -8,14 +7,14 @@ abstract class animals {
 }
 class dog extends animals{
 	
-	dog(String breed,String color,int age){
+	dog(String name, String breed,String color){
 	this.breed=breed;
 	this.color=color;
-	this.age=age;
+	this.name=name;
 	}
 	
 	void dog1() {
-		System.out.println("Age:"+age);
+		System.out.println("Name:"+name);
 		System.out.println("Colour:"+color);
 		System.out.println("Breed:"+breed);
 		
@@ -30,8 +29,8 @@ class dog extends animals{
 public class Abstr {
 
 	public static void main(String[] args) {
-		animals a=new dog("Pitbull","White",5);
-		dog d=new dog("Lebra","Black",6);
+		animals a=new dog("Bruno","Pitbull","White");
+		dog d=new dog("Mack","Lebra","Black");
 		d.dog1();
 		a.eat();
 		a.speak();
